@@ -9,7 +9,7 @@
     <div>
         <button onclick="clearEquation()">CE</button>
         <button onclick="clearEquation()">C</button>
-        <button onclick="">Backspace</button>
+        <button onclick="backspace()">Backspace</button>
         <button onclick="addKey('/')">/</button>
     </div>
     <div>
@@ -47,7 +47,6 @@
             displayEquation();       
         }
 
-
         function getResult(){
             equation = eval(equation);
             displayEquation();
@@ -61,7 +60,14 @@
         function displayEquation(){
             document.querySelector('.js__calculator__input').value = equation;
         }
-        
+
+        function backspace(){
+            let getValue = document.querySelector('.js__calculator__input');
+            let newValue = getValue.value.slice(0,-1);
+            equation = newValue;
+            displayEquation();
+        }
+
     </script>
 </body>
 </html>
