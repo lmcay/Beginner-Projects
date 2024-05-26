@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <input class="js__calculator__input" readonly></input>
+    
+    <div>
+        <button onclick="clearEquation()">CE</button>
+        <button onclick="clearEquation()">C</button>
+        <button onclick="">Backspace</button>
+        <button onclick="addKey('/')">/</button>
+    </div>
+    <div>
+        <button onclick="addKey('7')">7</button>
+        <button onclick="addKey('8')">8</button>
+        <button onclick="addKey('9')">9</button>
+        <button onclick="addKey('*')">*</button>
+    </div>
+    <div>
+        <button onclick="addKey('4')">4</button>
+        <button onclick="addKey('5')">5</button>
+        <button onclick="addKey('6')">6</button>
+        <button onclick="addKey('-')">-</button>
+    </div>
+    <div>
+        <button onclick="addKey('1')">1</button>
+        <button onclick="addKey('2')">2</button>
+        <button onclick="addKey('3')">3</button>
+        <button onclick="addKey('+')">+</button>
+    </div>
+    <div>
+        <button onclick="addKey('0')">0</button>
+        <button onclick="addKey('.')">.</button>
+        <button onclick="getResult()">=</button>
+    </div>
+
+</head>
+<body>
+    <script>
+
+        let equation = '';
+
+        function addKey(userKey) {
+            equation += userKey;
+            displayEquation();       
+        }
+
+
+        function getResult(){
+            equation = eval(equation);
+            displayEquation();
+        }
+
+        function clearEquation(){
+            equation = '';
+            displayEquation();
+        }
+
+        function displayEquation(){
+            document.querySelector('.js__calculator__input').value = equation;
+        }
+        
+    </script>
+</body>
+</html>
