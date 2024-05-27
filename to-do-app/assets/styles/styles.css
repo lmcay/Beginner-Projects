@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: rgb(34,34,34);
+}
+
+::-webkit-scrollbar {
+width: 10px;
+}
+
+::-webkit-scrollbar-track {
+background: rgb(70, 70, 70); 
+}
+
+::-webkit-scrollbar-thumb {
+background: rgb(54, 54, 54); 
+}
+
+::-webkit-scrollbar-thumb:hover {
+background: #555; 
+}
+
+.background__top {
+    background: linear-gradient(to right, rgba(97, 8, 180, 0.7), rgba(124, 0, 93, 0.8)),url(../images/background-picture.jpg) no-repeat center;
+    background-size: cover;
+    height: 50vh;
+    width: 100vw;
+}
+
+.to__do__main__container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(46, 46, 46);
+    height: 60%;
+    width: 75%;
+    overflow: hidden;
+    overflow-y: scroll;
+    border-radius: 10px;
+    max-width: 700px;
+}
+
+.add__to__do, .to__do__container div {
+    background-color: rgb(66, 66, 66);
+    padding: 1rem;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+}
+
+.to__do__container div {
+    margin-bottom: 0;
+    border-bottom: solid 1px rgb(87, 87, 87);
+    
+}
+
+.submit, .delete {
+    background-color: transparent;
+    border: solid rgb(117, 117, 117) 1px;
+    border-radius: 100%;
+    color: white(28, 226, 28);
+    font-size: 5px;
+    padding: 5px;
+    color: rgb(255, 255, 255);
+    cursor: pointer;
+}
+
+.user__input, .user__input:active {
+    background-color: transparent;
+    border: none;
+    outline: 0;
+    color: rgb(212,212,212);
+    width: 100%;
+}
